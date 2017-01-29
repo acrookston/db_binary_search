@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 [![CI Status](http://img.shields.io/travis/acrookston/db_binary_search.svg?style=flat)](https://travis-ci.org/acrookston/db_binary_search)
-[![codebeat badge](https://codebeat.co/badges/24f76413-0c57-410c-9e90-45b5309e6442)](https://codebeat.co/projects/github-com-acrookston-db_binary_search)
+[![Code Climate](https://codeclimate.com/github/acrookston/db_binary_search/badges/gpa.svg)](https://codeclimate.com/github/acrookston/db_binary_search)
 [![codecov](https://codecov.io/gh/acrookston/db_binary_search/branch/master/graph/badge.svg)](https://codecov.io/gh/acrookston/db_binary_search)
 
 
