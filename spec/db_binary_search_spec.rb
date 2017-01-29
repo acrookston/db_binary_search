@@ -24,7 +24,7 @@ RSpec.describe DBBinarySearch do
       Log.binary_search(:created_at, date)
     end
 
-    it "should find upper buond if not given" do
+    it "should find upper bound if not given" do
       date = DateTime.parse("2017-01-07 00:00:00")
       log = double("log", id: 10)
       expect(log).to receive(:id)

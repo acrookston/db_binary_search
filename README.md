@@ -7,7 +7,7 @@
 
 
 An Active Support concern extending Active Record with the ability to binary
-search a table for use with non-indexed, chronologically sorted tables.
+search a table for use with non-indexed, sorted tables.
 
 The gem allows you to avoid slow database scans if you have an
 auto-incrementing primary key running in parallel with a column which
@@ -59,8 +59,8 @@ binary_search(column, value, lower_id=nil, upper_id=nil)
 
 - `column` a symbol, is the table column to search for.
 - `value` a comparable value of same type as `column`, the value you are searching for.
-- `lower_id` optional primary key value to start searching lower bound at.
-- `upper_id` optional primary key value to start searching upper bound at.
+- `lower_id` optional primary key value to start searching lower bound at. Defaults to `model.first.id`.
+- `upper_id` optional primary key value to start searching upper bound at. Default to `model.last.id`.
 
 Full example:
 
@@ -81,7 +81,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/arookston/db_binary_search.
+Bug reports and pull requests are welcome on GitHub at https://github.com/acrookston/db_binary_search.
 
 If you're making a big change, please open an Issue first, so we can discuss. Otherwise:
 
