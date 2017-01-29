@@ -11,6 +11,9 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{An Active Support concern extending Active Record with the ability to binary search a table for use with non-indexed, chronologically sorted tables.}
   spec.description   = %q{
+    An Active Support concern extending Active Record with the ability to binary
+    search a table for use with non-indexed, chronologically sorted tables.
+
     The gem allows you to avoid slow database scans if you have an
     auto-incrementing primary key running in parallel with a column which
     you want to search.
