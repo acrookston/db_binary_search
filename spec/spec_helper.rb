@@ -1,6 +1,11 @@
 require "bundler/setup"
 require "byebug"
 require "db_binary_search"
+require 'simplecov'
+require 'codecov'
+
+SimpleCov.start
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
