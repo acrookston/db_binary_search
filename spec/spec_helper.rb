@@ -1,4 +1,5 @@
 require "bundler/setup"
+require "byebug"
 require "db_binary_search"
 
 RSpec.configure do |config|
@@ -8,4 +9,16 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.before(:suite) do
+    load File.dirname(__FILE__) + '/support/seed.rb'
+  end
 end
+
+ActiveRecord::Base.logger = Logger.new(STDOUT)
+ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ':memory:'
+#ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => File.dirname(__FILE__) + "/test.sqlite3")
+
+load File.dirname(__FILE__) + '/support/schema.rb'
+load File.dirname(__FILE__) + '/support/log.rb'
+
