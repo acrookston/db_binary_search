@@ -4,8 +4,8 @@ require 'active_record'
 module DBBinarySearch
   extend ActiveSupport::Concern
 
-  class_methods do
-    def binary_search(column, value, lower_id=nil, upper_id=nil)
+  included do
+    def self.binary_search(column, value, lower_id=nil, upper_id=nil)
       lower_id = self.first.id unless lower_id
       upper_id = self.last.id unless upper_id
 
