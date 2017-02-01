@@ -60,7 +60,7 @@ binary_search(column, value, lower_id=nil, upper_id=nil)
 - `column` a symbol, is the table column to search for.
 - `value` a comparable value of same type as `column`, the value you are searching for.
 - `lower_id` optional primary key value to start searching lower bound at. Defaults to `model.first.id`.
-- `upper_id` optional primary key value to start searching upper bound at. Default to `model.last.id`.
+- `upper_id` optional primary key value to start searching upper bound at. Defaults to `model.last.id`.
 
 Full example:
 
